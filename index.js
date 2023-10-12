@@ -12,7 +12,7 @@ const questions = [
     },
     {
         type: "input",
-        message: "Please, insert your project's description:",
+        message: "Please write a short description of your project:",
         name: "description"
     },
     {
@@ -32,6 +32,26 @@ const questions = [
         message: "What command should be run to run tests?",
         default: "npm test",
         name: "test"
+    },
+    {
+        type: "input",
+        message: "What does the user need to know about using the repo?",
+        name: "usage"
+    },
+    {
+        type: "input",
+        message: "What does the user need to know about contributing to the repo?",
+        name: "contributing"
+    },
+    {
+        type: "input",
+        message: "What is your email address?",
+        name: "email"
+    },
+    {
+        type: "input",
+        message: "What is your GitHub username?",
+        name: "github"
     }
 ];
 
