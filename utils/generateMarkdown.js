@@ -52,6 +52,7 @@ ${data.installation}
 ${data.usage}
 ${renderLicenseSection(data.license)}
 ## Contributing
+${data.contributing}
 ## Tests
 To run tests, run the following command:
 
