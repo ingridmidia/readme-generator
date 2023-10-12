@@ -8,12 +8,24 @@ const questions = [
     {
         type: "input",
         message: "What is your project's name?",
-        name: "title"
+        name: "title",
+        validate: (title) => {
+            if (!title) {
+                return 'Please provide a project name';
+            }
+            return true;
+        }
     },
     {
         type: "input",
         message: "Please write a short description of your project:",
-        name: "description"
+        name: "description",
+        validate: (description) => {
+            if (!description) {
+                return 'Please provide a description';
+            }
+            return true;
+        }
     },
     {
         type: "list",
@@ -36,12 +48,24 @@ const questions = [
     {
         type: "input",
         message: "What does the user need to know about using the repo?",
-        name: "usage"
+        name: "usage",
+        validate: (usage) => {
+            if (!usage) {
+                return 'Please providei nformation about using the repo';
+            }
+            return true;
+        }
     },
     {
         type: "input",
         message: "What does the user need to know about contributing to the repo?",
-        name: "contributing"
+        name: "contributing",
+        validate: (contributing) => {
+            if (!contributing) {
+                return 'Please provide information about contributing to the repo';
+            }
+            return true;
+        }
     },
     {
         type: "input",
@@ -51,7 +75,13 @@ const questions = [
     {
         type: "input",
         message: "What is your GitHub username?",
-        name: "github"
+        name: "github",
+        validate: (github) => {
+            if (!github) {
+                return 'Please provide your GitHub username';
+            }
+            return true;
+        }
     }
 ];
 
