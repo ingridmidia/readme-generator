@@ -1,3 +1,4 @@
+// generate license badge image or empty string if no license is selected
 function renderLicenseBadge(license) {
   switch (license) {
     case "MIT":
@@ -13,6 +14,7 @@ function renderLicenseBadge(license) {
   }
 }
 
+// if no license is selected do not add license link
 function renderLicenseLink(license) {
   if (license === "None") {
     return "";
@@ -21,6 +23,7 @@ function renderLicenseLink(license) {
   }
 }
 
+// if no license is selected do not add license section
 function renderLicenseSection(license) {
   if (license === "None") {
     return "";
@@ -30,6 +33,7 @@ This project is licensed under the ${license} license.`;
   }
 }
 
+// README markdown content
 function generateMarkdown(data) {
   return `# ${data.title}
 ${renderLicenseBadge(data.license)}

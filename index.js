@@ -2,6 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 
+// Define user input with validation and default values
 const questions = [
     {
         type: "input",
@@ -90,15 +91,18 @@ const questions = [
 ];
 
 function writeToFile(fileName, data) {
+    // generate README file or display error message
     fs.writeFile(`${fileName}.md`, generateMarkdown(data), (err) =>
         err ? console.error(err) : console.log('README file was created.')
     )
 }
 
 function init() {
+    // Call inquirer to read user input
     inquirer
         .prompt(questions)
         .then(function (data) {
+            // File name is README2 to not coflict with project README
             writeToFile("README2", data);
         });
 }
